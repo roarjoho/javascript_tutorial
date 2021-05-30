@@ -7,16 +7,30 @@
 </head>
 <body>
   <h1><a href="index.html" title="WEB">JavaScript</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+  var bodytag = document.querySelector('body');
+  if(this.value === 'night')
+  {
+  bodytag.style.backgroundColor='black';
+  bodytag.style.color = 'white';
+  this.value = 'day';
+  }
+  else {
+  bodytag.style.backgroundColor='white';
+  bodytag.style.color = 'black';
+  this.value = 'night';
+  }
+  ">
 
   <div id="grid">
     <ol>
-      <li> <a href="1.html" title="HTML" class="saw">HTML</a></li>
-      <li> <a href="2.html" title="CSS" class="saw">CSS</a></li>
-      <li> <a href="3.html" title="JavaScript" class="saw" id="active">JavaScript</a></li>
+      <li> <a href="1.html" title="HTML">HTML</a></li>
+      <li> <a href="2.html" title="CSS">CSS</a></li>
+      <li> <a href="3.html" title="JavaScript">JavaScript</a></li>
     </ol>
 
     <div>
-      <h2 style="color:#28b5b5;">What is JavaScript?</h2>
+      <h2>What is JavaScript?</h2>
       <p style="margin-top:20px;margin-bottom:20px;"><a href="https://www.w3.org/TR/html52/" target="_blank" title="Java Script specification" ></a>JavaScript, often abbreviaed as <strong><u style="color:#28b5b5">JS</u></strong>, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time comliled, and multi-paradigm. It has curly-bracket stntax, dynamic typing, prototype-based object-orientation, and first-class functions. </p>
        <p>
         Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. Over 97% of websites use it client-side for web page behavior, often incorporationg third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on the user's device. </p>

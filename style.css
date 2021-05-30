@@ -23,6 +23,9 @@ body {
   margin: 0px;
   padding: 20px;
   }
+  h2 {
+    color: #28b5b5;
+  }
 
  #grid {
    display:grid;

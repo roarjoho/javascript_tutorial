@@ -4,34 +4,54 @@
   <title>Index Page</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+  function nightdayhandler(self){
+    var bodytag = document.querySelector('body');
+    if(self.value === 'night')
+    {
+    bodytag.style.backgroundColor='black';
+    bodytag.style.color = 'white';
+    self.value = 'day';
+
+    var alist = document.querySelectorAll('a');
+    var i=0;
+    while (i < alist.length){
+      alist[i].style.color='#28b5b5';
+      i = i+1;
+    }
+   }
+    else {
+    bodytag.style.backgroundColor='white';
+    bodytag.style.color = 'black';
+    self.value = 'night';
+
+    var alist = document.querySelectorAll('a');
+    var i=0;
+    while (i < alist.length){
+      alist[i].style.color='#28b5b5';
+      i = i+1;
+    }
+  }
+}
+  </script>
 </head>
+
 <body>
   <h1><a href="index.html" title="WEB">WEB</a></h1>
-  
-  <input id="night_day" type="button" value="night_day" onclick="
-  if(document.querySelector('#night_day').value === 'night')
-  {
-  document.querySelector('body').style.backgroundColor='black'; 
-  document.querySelector('body').style.color = 'white';
-  document.querySelector('#night_day').value = 'day';
- }
-  else {
-  document.querySelector('body').style.backgroundColor='white'; 
-  document.querySelector('body').style.color = 'black';
-  document.querySelector('#night_day').value = 'night';
-}
+  <input id="night_day" type="button" value="night" onclick="
+  nightdayhandler(this);
   ">
 
   <div id ="grid">
     <ol>
-      <li> <a href="1.html" title="HTML" class="saw" id="active">HTML</a></li>
-      <li> <a href="2.html" title="CSS" class="saw" id="active">CSS</a></li>
-      <li> <a href="3.html" title="JavaScript" class="saw" id="active">JavaScript</a></li>
+      <li> <a href="1.html" title="HTML">HTML</a></li>
+      <li> <a href="2.html" title="CSS">CSS</a></li>
+      <li> <a href="3.html" title="JavaScript">JavaScript</a></li>
     </ol>
 
     <div>
-    <h2 style="color:#28b5b5;">Web Developement</h2>
-      <p>Web Developement is the work involved in developing a web site for the internet (World Wide Web) or an internet (a private network).</p><p> Web Development can range from developing a simple single static page of plain text to complex web application, electronic businesses, and social network services. A more comprehensive list of tasks to which web development commonly refers, may include web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development. </p>
+    <h2>Web Developement</h2>
+        <p>Web Developement is the work involved in developing a web site for the internet (World Wide Web) or an internet (a private network).</p><p> Web Development can range from developing a simple single static page of plain text to complex web application, electronic businesses, and social network services. A more comprehensive list of tasks to which web development commonly refers, may include web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development. </p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/5YDVJaItmaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
  </div>
@@ -46,6 +66,7 @@
        (d.head || d.body).appendChild(s);
        })();
    </script>
+
    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </p>
     <script type="text/javascript">
