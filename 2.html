@@ -4,22 +4,12 @@
   <title>CSS</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html" title="WEB">CSS</a></h1>
   <input id="night_day" type="button" value="night" onclick="
-  var bodytag = document.querySelector('body');
-  if(this.value === 'night')
-  {
-  bodytag.style.backgroundColor='black';
-bodytag.style.color = 'white';
-  this.value = 'day';
- }
-  else {
-  bodytag.style.backgroundColor='white';
-  bodytag.style.color = 'black';
-  this.value = 'night';
-}
+  nightdayhandler(this);
   ">
 
   <div id="grid">
