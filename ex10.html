@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object 객체</title>
+  </head>
+  <body>
+    <script>
+      var fruit = {
+        "a" : "apple",
+        "b" : "banana",
+        "c" : "croissant"
+      };
+      document.write(fruit.a + "<br>");
+
+      fruit.d = "durian";
+      document.write(fruit.d);
+    </script>
+
+      <h2>iterate</h2>
+   <script>
+      for (var key in fruit){
+      document.write(key + '<br>');
+    };
+   </script>
+
+<h3>property & method</h3>
+<script>
+  fruit.functionname = function(){
+    for (var key in this){
+      document.write(key + ' : ' + this[key]+"<br>");
+    };
+  };
+  fruit.functionname();
+
+  </script>
+
+
+  </body>
+</html>
